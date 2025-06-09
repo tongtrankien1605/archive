@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Sinh Nhật - Trương Thị Hồng Hạnh</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="https://i.imgur.com/135.gif" type="image/gif">
+    <style>
+        body {
+            background-color: #FFFFCC;
+            background-image: url('https://i.imgur.com/6SbAUq0.jpg');
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-attachment: fixed;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .layermensaje {
+            font-size: 14px;
+            color: #000000;
+            line-height: 1.5;
+        }
+        .box-s {
+            box-shadow: 15px 18px 18px -13px rgba(0,0,0,0.75);
+        }
+        .birthday-img {
+            width: 20%;
+            position: absolute;
+            left: 40%;
+            top: 50%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body onload="teclear();">
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <div class="container text-center mt-4">
+        <div id="txt" class="mb-4"></div>
+        
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10">
+                <div class="layermensaje" id="ttecleado"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <img src="https://i.imgur.com/L9Ew20c.jpg" alt="Birthday Image" class="rounded-circle img-thumbnail birthday-img">
+    </div>
+
+    <!-- Background Music -->
+    <iframe src="https://www.nhaccuatui.com/mh/background/f_peklmgPc" width="1" height="1" frameborder="0" allow="autoplay" style="display:none;"></iframe>
+
+    <script>
+        // Typing effect for message
+        const mensaje = `
+            <span style="font-size: 18px; color: #000033;" class="box-s">
+                Cách đây 15 năm, một cô bé đã chào đời. Hôm nay, cô bé ấy là Trương Thị Hồng Hạnh.
+            </span><br><br>
+            <span style="font-size: 18px; color: #08088A;" class="box-s">
+                Ngày 04/01/2022, một ngày đầy nắng và gió! Đây là ngày thiên thần nhỏ ra đời.<br>
+                15 năm sau, thiên thần ấy đã trở thành một cô gái dễ thương, xinh xắn!<br>
+                Anh chúc em luôn thành công và gặp nhiều may mắn trong cuộc sống! Hí hí!
+            </span><br><br>
+            <span style="font-size: 18px;" class="text-success box-s">
+                Chúc em ngày càng xinh đẹp, sức khỏe dồi dào, tình yêu bùng nổ!
+            </span><br><br>
+            <span style="font-size: 18px;" class="text-primary box-s">
+                Cầu mong những điều may mắn, tốt đẹp và hạnh phúc nhất đến với em trong tuổi mới.<br>
+                “Happy Birthday to Hạnh”
+            </span><br><br>
+            <span style="font-size: 16px; color: #FF00FF;">
+                Chúc em một ngày bình yên, êm ấm bên người yêu thương.<br>
+                Chúc em những điều tốt đẹp nhất và mọi ước nguyện trong ngày sinh nhật thành hiện thực!
+            </span>
+        `;
+        let line = 0;
+        let cursor = '_';
+        const ttecleado = document.getElementById('ttecleado');
+
+        function teclear() {
+            if (line === mensaje.length) cursor = '';
+            ttecleado.innerHTML = mensaje.substring(0, line) + cursor;
+            if (line++ < mensaje.length) setTimeout(teclear, 60);
+        }
+
+        // Countdown redirect (optional, commented out as it may not be needed)
+        /*
+        let c = 9999999999999999999999999999;
+        let t;
+        function ChangeUrl(site) {
+            c -= 1;
+            url = site;
+            t = setTimeout(() => ChangeUrl(url), 1000);
+            stopCount(c, url);
+        }
+        function stopCount(c, link) {
+            if (c === -1) {
+                clearTimeout(t);
+                location.href = link;
+            }
+        }
+        */
+    </script>
+
+    <!-- Remove malicious/obsolete window manipulation script -->
+</body>
+</html>
